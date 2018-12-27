@@ -6,7 +6,7 @@
   "repository": "https://github.com/jbrock1981/jbrock1981.github.io.git",
   "author": "jbrock1981 <jbrock1981@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
