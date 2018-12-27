@@ -1,1 +1,1 @@
-# coming soon!
+# awesome site coming soon!
