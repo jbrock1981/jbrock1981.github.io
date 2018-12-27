@@ -2,7 +2,7 @@
   "name": "gottahire",
   "version": "1.12.3",
   "description": "unknown",
-  "main": "index.js",
+  "main": "./index.js",
   "repository": "https://github.com/jbrock1981/jbrock1981.github.io.git",
   "author": "jbrock1981 <jbrock1981@gmail.com>",
   "license": "MIT",
