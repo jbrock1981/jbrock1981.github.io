@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line
 import ReactDOM from 'react-dom';
+import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
+import YesPage from './YesPage';
 
 function hideNoButton() {
     return `
@@ -9,9 +11,7 @@ function hideNoButton() {
         border: 1px solid black;
         cursor: none;
         color: black;
-        ${NoButton.textContent = "Yes!"}
     `
-    
 }
 
 const Container = styled.div`
@@ -23,7 +23,6 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     color: white;
-
 `
 const QuestionBox = styled.div`
     width: 70vw;
@@ -37,6 +36,7 @@ const ButtonBox = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    text-decoration: none;
 `
 const YesButton = styled.div`
     display: flex;
@@ -48,8 +48,11 @@ const YesButton = styled.div`
     border-radius: 15%;
     border: 1px solid gray;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
     :hover {
         background-color: gray;
+        text-decoration: none;
     }    
 `
 let NoButton = styled.div`
@@ -76,10 +79,13 @@ class App extends Component {
                     <h1>Are you looking for a developer?</h1>
                 </QuestionBox>
                 <ButtonBox>
-                    <YesButton>Yes</YesButton>
+                    <Link to="/yesPage"><YesButton>Yes</YesButton></Link>
                     <NoButton>No</NoButton>
                 </ButtonBox>
+                <Route exact path="/" />
+                <Route path="/yesPage" component={YesPage} />
             </Container>
+            
         );
     }
 }
